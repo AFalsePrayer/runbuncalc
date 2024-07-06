@@ -659,6 +659,7 @@ q
 			//if (isDoubles) field.gameType = 'Doubles'; *TODO*
 		}
 		var formeObj = $(this).siblings().find(".forme").parent();
+		console.log(formeObj)
 		itemObj.prop("disabled", false);
 		var baseForme;
 		if (pokemon.baseSpecies && pokemon.baseSpecies !== pokemon.name) {
@@ -725,7 +726,10 @@ function showFormes(formeObj, pokemonName, pokemon, baseFormeName) {
 
 	var formeOptions = getSelectOptions(formes, false, defaultForme);
 	formeObj.children("select").find("option").remove().end().append(formeOptions).change();
+	console.log("right?")
+	console.log(formeObj)
 	formeObj.show();
+	console.log(formeObj)
 }
 
 function setSelectValueIfValid(select, value, fallback) {
@@ -2090,6 +2094,12 @@ $(document).ready(function () {
 	$('#save-change').click(saveTrainerPokemon);
 	$('#double-legacy-mode').click(toggleDoubleLegacyMode);
 	$('#screen-calc').click(onClickScreenCalc)
+
+	$("#ko-switch").click(() => {
+		$("#ko-switch-panel").attr("hidden", (i, attr)=>{
+			return !attr;
+		})
+	});
 	for (let dropzone of document.getElementsByClassName("dropzone")){
 		dropzone.ondragenter=handleDragEnter;
 		dropzone.ondragleave=handleDragLeave;
@@ -2116,7 +2126,12 @@ $(document).ready(function () {
 	if (+localStorage.getItem("doubleLegacy")){
 		toggleDoubleLegacyMode()
 	}
+	$(".wrapper").attr("hidden", false)
+	$(".credits").attr("hidden", false)
+	// $(".settingsGearIconDiv").attr("hidden", false)
 
+	// $("#saveSettingsButton").trigger("click");
+	$(".loadingScreen")[0].style.visibility = "hidden";
 	//some CSS variable;
 	document.documentElement.style.setProperty("--spe-bor-width", "3px");
 });

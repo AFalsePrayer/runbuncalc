@@ -160,3 +160,53 @@ input.select2-input {
     background: url('../js/vendor/select2/select2.png') no-repeat 100% -22px, var(--background);
 }
 
+#p1, .playerSettings{
+    
+    background: repeating-linear-gradient(
+        135deg, 
+        #72041a7c, 
+        #72041a7c 50px, 
+        #b6203e7c 50px, 
+        #b6203e7c 51px
+    );
+    /* background-color: #72041a7c; */
+}
+#p2, .opposingSettings{
+    background: repeating-linear-gradient(
+        135deg, 
+        #1b41897c, 
+        #1b41897c 50px, 
+        #466cb37c 50px, 
+        #466cb37c 51px
+    );
+    /* background-color: #1b41897c; */
+}
+.field-info, .note-button, .poke-import{
+    background: repeating-linear-gradient(
+        135deg, 
+        #9779257c, 
+        #9779257c 50px, 
+        #daae347c 50px, 
+        #daae347c 51px
+    );
+    /* background-color: #9779257c; */
+}
+
+#trainer-mons{
+    background: repeating-linear-gradient(
+        135deg, 
+        #101010e0, 
+        #101010e0 5px, 
+        #202020e0 5px, 
+        #202020e0 10px
+    );
+}
+#opposing-mons {
+    background: repeating-linear-gradient(
+        135deg, 
+        #532c5ce0, 
+        #532c5ce0 5px, 
+        #632f6fe0 5px, 
+        #632f6fe0 10px
+    );
+}
