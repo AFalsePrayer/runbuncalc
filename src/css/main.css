@@ -911,13 +911,13 @@ table.field {
     flex-wrap: wrap;
 }
 .opposite-pok.right-side{
-    height: 50px;
-    width: 50px;
+    height: 80px;
+    width: 80px;
     cursor: pointer;
     box-sizing: border-box;
     transition-property: outline-color;
     transition-duration: 0.4s;
-    object-fit: none;
+    object-fit: contain;
 }
 /* F = Faster T = Speed tie S = slower */
 .mon-speed-F {

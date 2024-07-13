@@ -492,9 +492,10 @@ $(".set-selector").change(function () {
 					pok_name = "Zygarde-10%25"
 				}//this ruined my day
 				var newPoke = document.createElement("img");
+				console.log(next_poks[i])
 				newPoke.className = "opposite-pok right-side";
-				newPoke.src = `https://raw.githubusercontent.com/May8th1995/sprites/master/${pok_name}.png`;
-				newPoke.title = `${next_poks[i]}, ${next_poks[i]} BP`;
+				newPoke.src = getSrcImgPokemon(pok_name);
+				newPoke.title = `${next_poks[i]}, `;
 				nextTrainer=`${next_poks[i]}`
 				newPoke.dataset.id = `${CURRENT_TRAINER_POKS[i].split("]")[1]}`;
 				frag.append(newPoke);
@@ -1380,9 +1381,15 @@ function loadDefaultLists() {
 			var options = getSetOptions();
 			for (var i = 0; i < options.length; i++) {
 				var option = options[i];
-				var pokeName = option.pokemon.toUpperCase();
+				var fullName = option.text.toUpperCase();
 				if (!query.term || query.term.toUpperCase().split(" ").every(function (term) {
-					return pokeName.indexOf(term) === 0 || pokeName.indexOf("-" + term) >= 0 || pokeName.indexOf(" " + term) >= 0;
+					return (
+						fullName.indexOf(term) === 0 ||
+						fullName.indexOf("-" + term) >= 0 ||
+						fullName.indexOf(" " + term) >= 0 ||
+						fullName.indexOf("(" + term) >= 0
+					);
+					
 				})) {
 					if ($("#randoms").prop("checked")) {
 						if (option.id) results.push(option);
@@ -1466,7 +1473,7 @@ function addBoxed(poke, box) {
 	var newPoke = document.createElement("img");
 	newPoke.id = `${poke.name}${poke.nameProp}`
 	newPoke.className = "trainer-pok left-side";
-	newPoke.src = getSrcImgPokemon(poke);
+	newPoke.src = getSrcImgPokemon(poke.name);
 	newPoke.dataset.id = `${poke.name} (${poke.nameProp})`
 	newPoke.addEventListener("dragstart", dragstart_handler);
 	if (!box){
@@ -1481,11 +1488,40 @@ function getSrcImgPokemon(poke) {
 	if (!poke) {
 		return
 	}
-	if (poke.name == "Aegislash-Shield") {
-		return `https://raw.githubusercontent.com/May8th1995/sprites/master/Aegislash.png`
-	} else {
-		return `https://raw.githubusercontent.com/May8th1995/sprites/master/${poke.name}.png`
+	let pokeName = poke.toLowerCase();
+	switch(pokeName){
+		case "zygarde-10%": 
+			pokeName = "zygarde-10";
+			break;
+		case "oricorio-pa'u":
+			pokeName = "oricorio-pau"
+			break;
+		case "oricorio-pom-pom":
+			pokeName = "oricorio-pompom"
+			break;
+		case "mr. mime":
+			pokeName = "mrmime"
+			break;
+		case "farfetch’d":
+			pokeName = "farfetchd"
+			break;
+		case "farfetch’d-galar":
+			pokeName = "farfetchd-galar"
+			break;
+		case "nidoran-m":
+			pokeName = "nidoranm"
+			break;
+		case "nidoran-f":
+			pokeName = "nidoranf"
+			break;
+		case "ho-oh":
+			pokeName = "hooh"
+			break;
+		case "aegislash-shield":
+			pokeName = "aegislash"
+			break;
 	}
+	return `https://play.pokemonshowdown.com/sprites/gen5/${pokeName}.png`;
 }
 
 function get_trainer_poks(trainer_name) {
@@ -1502,7 +1538,7 @@ function get_trainer_poks(trainer_name) {
 
 function topPokemonIcon(fullname, node) {
 	var mon = { name: fullname.split(" (")[0] };
-	var src = getSrcImgPokemon(mon);
+	var src = getSrcImgPokemon(mon.name);
 	node.src = src;
 }
 
