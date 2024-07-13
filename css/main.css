@@ -4,13 +4,11 @@ a img {
 }
 .header {
     margin: 0 0 30px 0;
-
     background: #E5ECFB;
-    background: -webkit-gradient(linear, left top, left bottom, from(#E8EEFC), to(#D7DEEA));
-    background: -moz-linear-gradient(top,  #E8EEFC,  #D7DEEA);
-    background: linear-gradient(top,  #E8EEFC,  #D7DEEA);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#E8EEFC', endColorstr='#D7DEEA');
-
+    background: -webkit-gradient(linear, left to top, left to bottom, from(#E8EEFC), to(#D7DEEA));
+    background: -moz-linear-gradient(top, #E8EEFC, #D7DEEA);
+    background: linear-gradient(top, #E8EEFC, #D7DEEA);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E8EEFC', endColorstr='#D7DEEA');
     border-bottom: 1px solid #AAA;
     box-shadow: inset 1px 1px 0 rgba(255, 255, 255, .6), 0px 2px 2px rgba(0, 0, 0, .15);
     min-height: 50px;
@@ -46,8 +44,7 @@ a img {
     top: -8px;
     left: -150px;
 }
-.nav .button.cur,
-.nav .button.cur:hover {
+.nav .button.cur, .nav .button.cur:hover {
     color: #777777;
     background: #f8f8f8;
     -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
@@ -79,54 +76,51 @@ a img {
     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 2px rgba(255,255,255,1);
     box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 2px rgba(255,255,255,1);
     white-space: nowrap;
-
-    /* default colors */
+   /* default colors */
     color: #222222;
     border: solid 1px #AAAAAA;
     background: #e3e3e3;
     background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3));
-    background: -moz-linear-gradient(top,  #f6f6f6,  #e3e3e3);
-    background: linear-gradient(top,  #f6f6f6,  #e3e3e3);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#e3e3e3');
+    background: -moz-linear-gradient(top, #f6f6f6, #e3e3e3);
+    background: linear-gradient(top, #f6f6f6, #e3e3e3);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#e3e3e3');
 }
 .button:hover {
     background: #cfcfcf;
     background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#cfcfcf));
-    background: -moz-linear-gradient(top,  #f2f2f2,  #cfcfcf);
-    background: linear-gradient(top,  #f2f2f2,  #cfcfcf);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#cfcfcf');
+    background: -moz-linear-gradient(top, #f2f2f2, #cfcfcf);
+    background: linear-gradient(top, #f2f2f2, #cfcfcf);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#cfcfcf');
     border-color: #606060;
 }
 .button:active {
     background: -webkit-gradient(linear, left top, left bottom, from(#cfcfcf), to(#f2f2f2));
-    background: -moz-linear-gradient(top,  #cfcfcf,  #f2f2f2);
-    background: linear-gradient(top,  #cfcfcf,  #f2f2f2);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#cfcfcf', endColorstr='#f2f2f2');
+    background: -moz-linear-gradient(top, #cfcfcf, #f2f2f2);
+    background: linear-gradient(top, #cfcfcf, #f2f2f2);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cfcfcf', endColorstr='#f2f2f2');
 }
-
 .greenbutton {
     background: hsl(100,30%,93%);
     background: -webkit-gradient(linear, left top, left bottom, from(hsl(100,30%,97%)), to(hsl(100,30%,84%)));
-    background: -moz-linear-gradient(top,  hsl(100,30%,97%),  hsl(100,30%,84%));
-    background: linear-gradient(top,  hsl(100,30%,97%),  hsl(100,30%,84%));
+    background: -moz-linear-gradient(top, hsl(100,30%,97%), hsl(100,30%,84%));
+    background: linear-gradient(top, hsl(100,30%,97%), hsl(100,30%,84%));
     border-color: hsl(100,30%,70%);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#e3e3e3');
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#e3e3e3');
 }
 .greenbutton:hover {
     background: hsl(100,30%,87%);
     background: -webkit-gradient(linear, left top, left bottom, from(hsl(100,30%,94%)), to(hsl(100,30%,77%)));
-    background: -moz-linear-gradient(top,  hsl(100,30%,94%),  hsl(100,30%,77%));
-    background: linear-gradient(top,  hsl(100,30%,94%),  hsl(100,30%,77%));
+    background: -moz-linear-gradient(top, hsl(100,30%,94%), hsl(100,30%,77%));
+    background: linear-gradient(top, hsl(100,30%,94%), hsl(100,30%,77%));
     border-color: hsl(100,30%,41%);
 }
 .greenbutton:active {
     background: hsl(100,30%,77%);
     background: -webkit-gradient(linear, left top, left bottom, from(hsl(100,30%,77%)), to(hsl(100,30%,83%)));
-    background: -moz-linear-gradient(top,  hsl(100,30%,77%),  hsl(100,30%,83%));
-    background: linear-gradient(top,  hsl(100,30%,77%),  hsl(100,30%,83%));
+    background: -moz-linear-gradient(top, hsl(100,30%,77%), hsl(100,30%,83%));
+    background: linear-gradient(top, hsl(100,30%,77%), hsl(100,30%,83%));
     border-color: hsl(100,30%,41%);
 }
-
 /* general page styling */
 html, body {
     font: 10pt Verdana, sans-serif;
@@ -136,56 +130,32 @@ html, body {
     padding: 0;
     min-width: 100em;
 }
-
 .trainer-poks-label {
-    margin:  10px 0px;
+    margin: 10px 0px;
 }
-
 .trainer-pok-list {
     display: flex;
     flex-wrap: wrap;
 }
-
 .trainer-pok-list {
     display: flex;
     flex-wrap: wrap;
 }
-
 .trainer-pok{
-    height:  100%;
-    width:  auto;
-    margin-right:  10px;
+    height: 100%;
+    width: auto;
+    margin-right: 10px;
     cursor: pointer;
     box-sizing: border-box;
 }
-
-.trainer-pok:hover,  .opposite-pok:hover{
+.trainer-pok:hover, .opposite-pok:hover{
     outline: 2px solid;
     outline-color: #1abc9c;
-}
-
-.wrapper {
-    padding: 0 1em;
-    max-width: 1285px;
-    margin: 0 auto;
-}
-.credits {
-    clear: both;
-    padding: 20px;
-    max-width: 1285px;
-    margin: 0px auto;
-}
-div.wrapper > div > span {
-    padding-right: 5px;
 }
 fieldset {
     float: left;
     background-color: #F1F4F9;
     border: 1px solid #AAAAAA;
-}
-legend {
-    font-weight: bold;
-    text-align: center;
 }
 th, td {
     padding: 0;
@@ -201,12 +171,13 @@ th {
     top: -5px;
 }
 .big-text {
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     font-size: 1.1em;
     margin: 0.5em 0;
 }
-.big-text #mainResult:hover {  /* indicates the presence of click-to-copy function */
+.big-text #mainResult:hover {
+   /* indicates the presence of click-to-copy function */
     cursor: pointer;
     opacity: 0.7;
 }
@@ -226,10 +197,8 @@ th {
 }
 .panel {
     float: left;
-    display: inline-block; /* required for honkaculate to work */
-}
-.poke-info {
-    width: 30em;
+    display: inline-block;
+   /* required for honkaculate to work */
 }
 .field-info, .poke-import , .note-button{
     text-align: center;
@@ -242,7 +211,6 @@ th {
 #holder-2 tr {
     white-space: nowrap;
 }
-
 /* general button styling */
 .btn {
     text-align: center;
@@ -294,7 +262,8 @@ th {
 .btn-mid {
     border-radius: 0;
 }
-.visually-hidden:focus + .btn, /* Add visual indication when focusing on visually hidden elements */
+.visually-hidden:focus + .btn, 
+/* Add visual indication when focusing on visually hidden elements */
 .btn:hover {
     z-index: 10;
     border-color: #777777;
@@ -308,7 +277,6 @@ th {
 .visually-hidden[type="radio"]:checked + .btn {
     cursor: default;
 }
-
 /* Hide element visually, but not from screen readers. See http://adrianroselli.com/2017/05/under-engineered-custom-radio-buttons-and-checkboxen.html */
 .visually-hidden {
     clip: rect(1px, 1px, 1px, 1px);
@@ -316,9 +284,9 @@ th {
     overflow: hidden;
     position: absolute;
     top: auto;
-    white-space: nowrap; /* https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe */
+    white-space: nowrap;
+   /* https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe */
 }
-
 .visually-hidden:disabled + .btn {
     color: #999999;
 }
@@ -335,34 +303,16 @@ th {
 .locked-move:checked + .btn {
     background: #ffff99;
 }
-
 .genSelection, .notationSelection {
     display: inline-block;
     position: relative;
     top: -8px;
 }
-
 /* header */
-.move-result-group {
-    min-width: 50em;
-    margin: 1em 0 11.5em;
-}
 .move-result-subgroup {
     float: left;
     width: 50%;
 }
-.move-result-group .btn {
-    margin-right: 1em;
-}
-.main-result-group {
-    margin: 2em 0 1em;
-}
-.result-move-header {
-    font-size: 0.8em;
-    font-weight: bold;
-    margin: 0 0 5px;
-}
-
 /* pokemon info */
 .poke-info label {
     display: inline-block;
@@ -383,9 +333,6 @@ th {
 .info-group {
     margin: 1em 0;
 }
-.set-selector {
-    width: 100%;
-}
 .info-selectors select {
     width: 12em;
 }
@@ -396,7 +343,7 @@ select.toxic-counter {
     font-size: 0.9em;
 }
 .move-selector {
-    width: 11.5em;
+    width: 1.5em;
 }
 .poke-info input.move-bp {
     width: 2em;
@@ -424,12 +371,11 @@ select.toxic-counter {
     padding: 3px 3px;
 }
 .poke-info .max-btn {
-	font-size: 0.8em;
-	width: 2.5em;
-	height: 1em;
-	padding: 3px 3px;
+    font-size: 0.8em;
+    width: 2.5em;
+    height: 1em;
+    padding: 3px 3px;
 }
-
 /* field info */
 .field-info .btn {
     font-size: 0.8em;
@@ -437,14 +383,8 @@ select.toxic-counter {
 table.field {
     width: 100%;
 }
-
 [hidden], .hide {
     display: none;
-}
-
-/* select2 overrides */
-.select2-container .select2-choice > .select2-chosen {
-    width: 100%;
 }
 .small-select.select2-container .select2-choice {
     font-size: 0.9em;
@@ -457,79 +397,44 @@ table.field {
 .small-select.select2-dropdown-open .select2-choice .select2-arrow b {
     background-position: -18px -4px;
 }
-
 /* Bootstrap */
 .panel-group > .panel {
     clear: left;
 }
-
 /* ColVis */
 .clear {
-  clear: right;
+    clear: right;
 }
-
 .import-team-text {
     min-width: 27em;
     min-height: 10em;
     resize: vertical;
 }
-
 .import-name-text {
-	min-width: 26.3em;
+    min-width: 26.3em;
     min-height: 1em;
     overflow: auto;
     display: inline;
 }
-
-.hpbar {
-    height: 4px;
-    border-style: solid;
-    border-top-width: 2px;
-    border-right-width: 1px;
-    border-bottom-width: 2px;
-    border-left-width: 0.5px;
-    border-radius: 3px;
-}
-
 .hpbar.hp-green {
-    border-top-color: #00dd60;
     background-color: green;
-    border-bottom-color: #007734;
-    border-right-color: #007734;
 }
-
 .hpbar.hp-yellow {
-    border-top-color: #f8e379;
     background-color: #f5d538;
-    border-bottom-color: #be9f0a;
-    border-right-color:#be9f0a;
 }
-
 .hpbar.hp-red {
-    border-top-color: #f37f67;
     background-color: #ee4928;
-    border-bottom-color: #a3260d;
-    border-right-color: #a3260d;
 }
-
 .pool {
     padding: 15px 0;
 }
-.ability-pool, .move-pool  {
+.ability-pool, .move-pool {
     padding-bottom: 5px;
 }
-.extraSetAbilities,
-.extraSetItems,
-.extraSetMoves {
+.extraSetAbilities, .extraSetItems, .extraSetMoves {
     width: 100%;
 }
-
-/*
-
-    F = Faster 
-    T = Speed tie
-    S = slower
-*/
+/* F = Faster T = Speed tie S = slower */
 .mon-speed-F{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -537,7 +442,7 @@ table.field {
     border: solid;
     border-color: #7ee1ff;
     border-radius: 20%;
-    border-width: var(--spe-bor-width)
+    border-width: var(--spe-bor-width) 
 }
 .mon-speed-T{
     box-sizing: border-box;
@@ -546,80 +451,77 @@ table.field {
     border: solid;
     border-color: #894197;
     border-radius: 20%;
-    border-width: var(--spe-bor-width)
+    border-width: var(--spe-bor-width) 
 }
 .mon-speed-S{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: solid;
-    border-color: #1c1414;;
+    border-color: #1c1414;
+   ;
     border-radius: 20%;
     border-width: var(--spe-bor-width);
 }
 .mon-speed-none{
-    border: none !important; 
+    border: none !important;
 }
 .mon-dmg-none{
     background: var(--fieldset-color) !important;
 }
 .mon-dmg-W{
-    /* Is considerable a wall*/
+   /* Is considerable a wall*/
     background: linear-gradient(to right, #0f0bf3 50%, var(--fieldset-color) 0%);
 }
 .mon-dmg-WMO{
-    /* Is considerable a wall that may OHKO*/
+   /* Is considerable a wall that may OHKO*/
     background: linear-gradient(to right, #1295ec 50%, var(--fieldset-color) 0%);
 }
 .mon-dmg-4{
-    /*Gets OHKO*/
+   /*Gets OHKO*/
     background: linear-gradient(to right, var(--fieldset-color) 50%, #dd0b0b 0%);
 }
 .mon-dmg-3{
-    /*maybe gets OHKO*/
+   /*maybe gets OHKO*/
     background: linear-gradient(to right, var(--fieldset-color) 50%, #ff7f16 0%);
 }
 .mon-dmg-1{
-    /*inflicts OHKO*/
+   /*inflicts OHKO*/
     background: linear-gradient(to right, #20d408 50%, var(--fieldset-color) 0%);
 }
 .mon-dmg-2{
-    /*may inflicts OHKO*/
+   /*may inflicts OHKO*/
     background: linear-gradient(to right, #daff08 50%, var(--fieldset-color) 0%);
 }
-
 .mon-dmg-14{
-    /*both sides Gets OHKO*/
+   /*both sides Gets OHKO*/
     background: linear-gradient(to right, #20d408 50%, #dd0b0b 0%);
 }
 .mon-dmg-23{
-    /*both sides might inflict OHKO*/
+   /*both sides might inflict OHKO*/
     background: linear-gradient(to right, #daff08 50%, #ff7f16 0%);
 }
 .mon-dmg-13{
-    /*inflict OHKO but may Gets OHKO*/
+   /*inflict OHKO but may Gets OHKO*/
     background: linear-gradient(to right, #20d408 50%, #ff7f16 0%);
 }
 .mon-dmg-24{
-    /*may inflict OHKO but Gets OHKO*/
+   /*may inflict OHKO but Gets OHKO*/
     background: linear-gradient(to right, #daff08 50%, #dd0b0b 0%);
 }
-
 .box-poke, #trainer-pok-list-opposing2, #trainer-pok-list-opposing{
     min-height: 30px;
 }
 .dropzone::before{
     content:attr(data-placeholder);
-    color:gray
+    color:gray 
 }
-
 .deadzone:hover{
     background: #722323;
 }
 .over{
     background: #373232;
 }
-
 .s-arrow{
     border: solid rgb(175, 155, 155);
     border-width: 0 3px 3px 0;
@@ -628,7 +530,7 @@ table.field {
 }
 .arrowdown {
     transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 .arrowright {
     transform: rotate(-45deg);
@@ -636,11 +538,11 @@ table.field {
 }
 .arrowtop {
     transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
 }
 .arrowleft{
     transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
 .l-side-button, .r-side-button{
     position: absolute;
@@ -655,11 +557,9 @@ table.field {
 .right-side-pannel{
     float: none;
 }
-
 #p2mon, #p1mon, #monSingle, #monDouble{
     min-height: 30px;
 }
-
 .info-paragraph > b{
     color: rgb(15, 14, 14);
 }
@@ -667,7 +567,6 @@ table.field {
     background: var(--fieldset-color);
     color: unset;
 }
-
 .box-frame{
     position: absolute;
     background: var(--fieldset-color);
@@ -680,6 +579,8 @@ table.field {
     height: 400px;
     top: 500px;
     left: 500px;
+    resize: both;
+    overflow: scroll;
 }
 #note-box-frame{
     z-index: 2;
@@ -687,7 +588,6 @@ table.field {
     height: fit-content;
     top: 200px;
     left: 1220px;
-    overflow: visible;
 }
 .screen-box-frame{
     position: absolute !important;
@@ -709,7 +609,6 @@ table.field {
     font-size: larger;
     text-align: unset;
 }
-
 .close-frame{
     width: 25px;
     height: 25px;
@@ -721,99 +620,603 @@ table.field {
     right: 0%;
     cursor: pointer;
 }
-
 #close-item-box:hover{
     background-color: white;
     overflow: auto;
-    
 }
-
 .mdiv {
-  height: 25px;
-  width: 2px;
-  margin-left: 12px;
-  background-color: black;
-  transform: rotate(45deg);
-  Z-index: 4;
+    height: 25px;
+    width: 2px;
+    margin-left: 12px;
+    background-color: black;
+    transform: rotate(45deg);
+    Z-index: 4;
 }
-
 .md {
-  height: 25px;
-  width: 2px;
-  background-color: black;
-  transform: rotate(90deg);
-  Z-index: 5;
+    height: 25px;
+    width: 2px;
+    background-color: black;
+    transform: rotate(90deg);
+    Z-index: 5;
 }
-
 .box-item-list>img:hover{
     background: var(--button-hover);
 }
-
-
 .berry-bb{
-    background:#B8B8D0; 
-} 
+    background:#B8B8D0;
+}
 .berry-cr{
     background:#B8A038;
-}   
+}
 .berry-cl{
     background:#A8A878;
-}   
+}
 .berry-cp{
-    background:#C03028; 
-}   
+    background:#C03028;
+}
 .berry-co{
-    background:#A890F0; 
-}   
+    background:#A890F0;
+}
 .berry-cb{
-    background:#705848; 
-}   
+    background:#705848;
+}
 .berry-ha{
     background:#7038F8;
-}   
+}
 .berry-ka{
-    background:#705898; 
-}   
+    background:#705898;
+}
 .berry-ke{
-    background:#A040A0; 
-}   
+    background:#A040A0;
+}
 .berry-oc{
     background:#F08030;
-}   
+}
 .berry-ps{
     background:#6890F0;
-}   
+}
 .berry-py{
     background:#F85888;
-    
-}   
+}
 .berry-ri{
     background:#78C850;
-    
-}  
+}
 .berry-ro{
-    background:#EE99AC; 
-}   
+    background:#EE99AC;
+}
 .berry-sh{
-    background:#E0C068; 
-}   
+    background:#E0C068;
+}
 .berry-ta{
-    background:#A8B820; 
-}   
+    background:#A8B820;
+}
 .berry-wa{
     background:#F8D030;
-}   
-.berry-ya{
-    background:#98D8D8; 
 }
-
+.berry-ya{
+    background:#98D8D8;
+}
 #sets > a {
     margin-left: 5px;
     margin-right: 5px;
 }
-
 #screen-calc{
     float: right;
     margin-top: 22px;
     margin-right: 41px;
+}
+#p1,.playerSettings {
+    background: repeating-linear-gradient( 135deg, #ffbfcc7c, #ffbfcc7c 50px, #b6203e7c 50px, #b6203e7c 51px );
+    width: 22em;
+   /* background-color: #72041a7c;
+    */
+}
+#p2,.opposingSettings{
+    background: repeating-linear-gradient( 135deg, #7aa2ed7c, #7aa2ed7c 50px, #466cb37c 50px, #466cb37c 51px );
+    width: 22em;
+   /* background-color: #1b41897c;
+    */
+}
+.field-info, .note-button, .poke-import{
+    background: repeating-linear-gradient( 135deg, #f3d06e7c, #f3d06e7c 50px, #daae347c 50px, #daae347c 51px );
+   /* background-color: #9779257c;
+    */
+}
+#trainer-mons {
+    background: repeating-linear-gradient( 135deg, #eaeaeae0, #eaeaeae0 5px, #d3d3d3e0 5px, #d3d3d3e0 10px );
+    resize:both;
+    overflow:auto;
+    width:17em;
+    display:flex;
+    flex-direction:column;
+}
+#opposing-mons {
+    background: repeating-linear-gradient( 135deg, #e198f5e0, #e198f5e0 5px, #e2b8ebe0 5px, #e2b8ebe0 10px );
+    width: 12em;
+}
+/* general page styling */
+html, body {
+    font: 10pt Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-width: 100em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    -webkit-animation: fadein 3s;
+   /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3s;
+   /* Firefox < 16 */
+    -ms-animation: fadein 3s;
+   /* Internet Explorer */
+    -o-animation: fadein 3s;
+   /* Opera < 12.1 */
+    animation: fadein 3s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+   }
+    to {
+        opacity: 1;
+   }
+}
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from {
+        opacity: 0;
+   }
+    to {
+        opacity: 1;
+   }
+}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+   }
+    to {
+        opacity: 1;
+   }
+}
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from {
+        opacity: 0;
+   }
+    to {
+        opacity: 1;
+   }
+}
+.wrapper {
+    padding: 0 1em;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.credits {
+    clear: both;
+    padding: 20px;
+    max-width: 100%;
+    margin: 50px auto;
+}
+legend {
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-height: 1em;
+    margin-bottom: 1em;
+}
+.field-info,.note-button, .poke-import {
+    text-align: center;
+    width: 20.5em;
+}
+/* header */
+.move-result-group {
+    display: flex;
+    min-width: 30em;
+    justify-content: center;
+    margin: 1em 0 1.5em;
+}
+.move-result-subgroup {
+    width: 40%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.move-result-group .btn {
+    margin: 0 1em;
+}
+.main-result-group {
+    margin: 0em 0 1em;
+    text-align: center;
+}
+.result-move-header {
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 0 2em;
+}
+.move-selector.select2-container > .select2-choice > .select2-chosen {
+    width: 0em;
+  }
+.set-selector {
+    width: 60%;
+    height: 2em;
+}
+#trainer-pok-list-opposing {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+/* field info */
+.field-info .btn {
+    font-size: 0.8em;
+}
+table.field {
+    width: 100%;
+}
+/* select2 overrides */
+.select2-container .select2-choice > .select2-chosen {
+    width: 11.5em;
+}
+.move-selector.select2-chosen{
+    width:0em;
+}
+.small-select.select2-container .select2-choice {
+    font-size: 0.9em;
+    height: 18px;
+    line-height: 18px;
+}
+.small-select.select2-container .select2-choice .select2-arrow b {
+    background-position: 0 -4px;
+}
+.small-select.select2-dropdown-open .select2-choice .select2-arrow b {
+    background-position: -18px -4px;
+}
+/* Bootstrap */
+.panel-group > .panel {
+    clear: left;
+}
+/* ColVis */
+.clear {
+    clear: right;
+}
+.import-team-text {
+    min-width: 20em;
+    min-height: 10em;
+    resize: vertical;
+}
+.import-name-text {
+    min-width: 26.3em;
+    min-height: 1em;
+    overflow: auto;
+    display: inline;
+}
+.hpbar {
+    height: 4px;
+    border-style: none;
+    border-top-width: 2px;
+    border-right-width: 1px;
+    border-bottom-width: 2px;
+    border-left-width: 0.5px;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+.trainer-poke-list, .trainer-poke-list-opposing {
+    display: flex;
+    flex-wrap: wrap;
+}
+.opposite-pok.right-side{
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition-property: outline-color;
+    transition-duration: 0.4s;
+    object-fit: contain;
+}
+/* F = Faster T = Speed tie S = slower */
+.mon-speed-F {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: solid;
+    border-color: #7ee1ff;
+    border-radius: 20%;
+}
+.mon-speed-T {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: solid;
+    border-color: #894197;
+    border-radius: 20%;
+}
+.mon-speed-S {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: solid;
+    border-color: #1c1414;
+    border-radius: 20%;
+}
+.mon-speed-none {
+    border: none !important;
+}
+.mon-dmg-none {
+    background: var(--fieldset-color) !important;
+}
+.mon-dmg-W {
+   /* Is considerable a wall*/
+    background: linear-gradient(to right, #0f0bf3 50%, var(--fieldset-color) 0%);
+}
+.mon-dmg-WMO {
+   /* Is considerable a wall that may OHKO*/
+    background: linear-gradient(to right, #1295ec 50%, var(--fieldset-color) 0%);
+}
+.mon-dmg-4 {
+   /*Gets OHKO*/
+    background: linear-gradient(to right, var(--fieldset-color) 50%, #dd0b0b 0%);
+}
+.mon-dmg-3 {
+   /*maybe gets OHKO*/
+    background: linear-gradient(to right, var(--fieldset-color) 50%, #ff7f16 0%);
+}
+.mon-dmg-1 {
+   /*inflicts OHKO*/
+    background: linear-gradient(to right, #20d408 50%, var(--fieldset-color) 0%);
+}
+.mon-dmg-2 {
+   /*may inflicts OHKO*/
+    background: linear-gradient(to right, #daff08 50%, var(--fieldset-color) 0%);
+}
+.mon-dmg-14 {
+   /*both sides Gets OHKO*/
+    background: linear-gradient(to right, #20d408 50%, #dd0b0b 0%);
+}
+.mon-dmg-23 {
+   /*both sides might inflict OHKO*/
+    background: linear-gradient(to right, #daff08 50%, #ff7f16 0%);
+}
+.mon-dmg-13 {
+   /*inflict OHKO but may Gets OHKO*/
+    background: linear-gradient(to right, #20d408 50%, #ff7f16 0%);
+}
+.mon-dmg-24 {
+   /*may inflict OHKO but Gets OHKO*/
+    background: linear-gradient(to right, #daff08 50%, #dd0b0b 0%);
+}
+.trainer-poke.left-side {
+    width: 3em;
+    object-fit: none;
+}
+.box-poke, .trainer-poke-list-opposing {
+    min-height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2em;
+}
+.deadzone:hover {
+    background: #722323;
+}
+.over {
+    background: #373232;
+}
+.info-paragraph > b {
+    color: rgb(15, 14, 14);
+}
+.info-paragraph > b:hover {
+    background: var(--fieldset-color);
+    color: unset;
+}
+.genSelection {
+    display: none;
+}
+.five-panels {
+    display: flex;
+    flex-flow: nowrap;
+}
+.info-selectors {
+    display: flex;
+    flex-direction: column;
+}
+#p1 .selector-label {
+    float: left;
+    text-align: left;
+}
+#p2 .selector-label {
+    float: right;
+    text-align: right;
+}
+#p1 .selector-select {
+    float: right;
+}
+#p2 .selector-select {
+    float: left;
+    direction: ltr;
+}
+.top {
+    display: flex;
+    flex-direction: column;
+}
+.on-legend {
+    margin: 1em;
+}
+button.on-legend {
+    min-width: 4.5em;
+}
+label.opposing, label.player {
+    width: unset;
+    max-height: 2em;
+    max-width: 13em;
+}
+#p2mon, #p1mon {
+    height: 100px;
+    width: 100px;
+    object-fit: none;
+    flex-basis: fill-available;
+}
+.info-group.display-sprites {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.exbg {
+    position: fixed;
+    height: 100%;
+    object-fit: contain;
+    z-index: -1;
+}
+.visually-hidden:checked + .btn > img {
+    filter: grayscale(0%);
+}
+.btn > img {
+    filter: grayscale(100%);
+}
+#p1b, #p2b {
+    display: flex;
+    flex-direction: column;
+}
+#p1b span, #p2b span {
+    width: 100%;
+}
+#bg-image-a {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+}
+#resultGroupL > div, #resultGroupR > div {
+    display: flex;
+    flex-direction: row;
+}
+#resultGroupL > div {
+    justify-content: right;
+}
+#resultGroupR > div {
+    justify-content: left;
+}
+.display-damage-text {
+    display: inline-grid;
+    align-content: center;
+}
+#resultGroupL .display-damage-text {
+    justify-items: right;
+}
+.move-result-subgroup .btn.btn-xxxwide {
+    height: 2em;
+    align-content: center;
+    transition-property: color;
+    transition-duration: 0.4s;
+}
+.speed-img {
+    width: 1.5em;
+}
+.move-result-group {
+    display: flex;
+    min-width: 30em;
+    justify-content: center;
+}
+#settingsGearIcon {
+    cursor:pointer;
+    width: 4em;
+    height: 4em;
+    display: block;
+    fill: currentcolor;
+    position:fixed;
+    top:80%;
+    left:0%;
+}
+.settingsPage {
+    backdrop-filter: blur(3px);
+    background-color: var(--background);
+    position:absolute;
+    margin:auto;
+}
+.settingsOverlay{
+    backdrop-filter: blur(3px);
+    height:100%;
+    width:100%;
+    margin:auto;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:100;
+}
+.highest-roll{
+    color:lime !important;
+}
+.can-ohko{
+    color: orange !important;
+}
+.ohko{
+    color: red !important;
+    text-transform: uppercase;
+}
+.loadingScreen {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8em;
+    z-index: 3;
+    flex-direction: column;
+}
+.settingsPanels{
+    display:flex;
+}
+.settingsPage fieldset{
+    width:100%;
+}
+div:has(> #box-poke-list){
+    flex-grow:1;
+}
+#trainer-mons > div {
+    margin: 5px 0;
+}
+.ivs, .base{
+    display:none !important;
+}
+.i-f-stats > table,.i-f-o-stats > table{
+    text-align:center;
+    width:100%;
+}
+
+.i-f-traits label {
+	float: left;
+	text-align: left;
+}
+
+.i-f-o-traits label {
+	float: right;
+	text-align: right;
+}
+
+.i-f-traits select {
+	float: right;
+}
+
+.i-f-o-traits select {
+	float: left;
+	direction: ltr;
+}
+select.move-cat option[value="Physical"]{
+    background-image: url("https://archives.bulbagarden.net/media/upload/1/1c/PhysicalIC_Masters.png");
+}
+select.move-cat option[value="Special"]{
+    background-image: url("https://archives.bulbagarden.net/media/upload/a/a6/SpecialIC_Masters.png");
+}
+.ko-switch-panel{
+    z-index: 3;
+    width: 500px;
+    height: 400px;
+    top:100px;
+    left:100px;
 }

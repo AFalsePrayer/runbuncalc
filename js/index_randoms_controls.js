@@ -14,19 +14,23 @@ var resultLocations = [[], [], [], []];
 for (var i = 0; i < 4; i++) {
 	resultLocations[0].push({
 		"move": "#resultMoveL" + (i + 1),
-		"damage": "#resultDamageL" + (i + 1)
+		"damage": "#resultDamageL" + (i + 1),
+		"recoil": "#resultRecoilL" + (i + 1)
 	});
 	resultLocations[1].push({
 		"move": "#resultMoveR" + (i + 1),
-		"damage": "#resultDamageR" + (i + 1)
+		"damage": "#resultDamageR" + (i + 1),
+		"recoil": "#resultRecoilR" + (i + 1)
 	});
 	resultLocations[2].push({
 		"move": "#resultMove2L" + (i + 1),
-		"damage": "#resultDamage2L" + (i + 1)
+		"damage": "#resultDamage2L" + (i + 1),
+		"recoil": "#resultRecoil2L" + (i + 1)
 	});
 	resultLocations[3].push({
 		"move": "#resultMove2R" + (i + 1),
-		"damage": "#resultDamage2R" + (i + 1)
+		"damage": "#resultDamage2R" + (i + 1),
+		"recoil": "#resultRecoil2R" + (i + 1)
 	});
 }
 
@@ -74,8 +78,18 @@ function performCalculations(pP2, double) {
 			return secondMove.maxDamage - firstMove.maxDamage;
 		});
 		$(resultLocations[0 + double][i].move + " + label").text(p1.moves[i].name.replace("Hidden Power", "HP"));
-		$(resultLocations[0 + double][i].damage).text(result.moveDesc(notation));
-
+		$(resultLocations[0][i].damage).text(
+			result.moveDesc(notation).split("(")[0]
+		);
+		if (result.moveDesc(notation).includes("(")) {
+			$(resultLocations[0][i].recoil).attr("hidden", false);
+			$(resultLocations[0][i].recoil).text(
+				"(" + result.moveDesc(notation).split("(")[1]
+			);
+		} else {
+			$(resultLocations[0][i].recoil).attr("hidden", true);
+			$(resultLocations[0][i].recoil).text("");
+		}
 		// P2
 		result = damageResults[1 + double][i];
 		maxDamage = result.range()[1] * p2.moves[i].hits;
@@ -88,8 +102,18 @@ function performCalculations(pP2, double) {
 			return secondMove.maxDamage - firstMove.maxDamage;
 		});
 		$(resultLocations[1 + double][i].move + " + label").text(p2.moves[i].name.replace("Hidden Power", "HP"));
-		$(resultLocations[1 + double][i].damage).text(result.moveDesc(notation));
-
+		$(resultLocations[1][i].damage).text(
+			result.moveDesc(notation).split("(")[0]
+		);
+		if (result.moveDesc(notation).includes("(")) {
+			$(resultLocations[1][i].recoil).attr("hidden", false);
+			$(resultLocations[1][i].recoil).text(
+				"(" + result.moveDesc(notation).split("(")[1]
+			);
+		} else {
+			$(resultLocations[1][i].recoil).attr("hidden", true);
+			$(resultLocations[1][i].recoil).text("");
+		}
 		// BOTH
 		var bestMove;
 		if (fastestSide === "tie") {
@@ -213,7 +237,15 @@ $(".result-move").change(function (ev) {
 			var desc = result.fullDesc(notation, false);
 			if (desc.indexOf('--') === -1) desc += ' -- possibly the worst move ever';
 			$("#mainResult").text(desc);
-			$("#damageValues").text("Possible damage amounts: (" + displayDamageHits(result.damage) + ")");
+			var drainValue = 0;
+			if(result.move.drain){
+				drainValue = result.move.drain
+			}
+			var recoilValue = 0;
+			if(result.move.recoil){
+				recoilValue = result.move.recoil
+			}
+			displayDamageHits(result.damage, drainValue, recoilValue)
 		}
 	}
 });
@@ -229,17 +261,63 @@ $(".result-move2").change(function (ev) {
 		}
 	}
 });
-function displayDamageHits(damage) {
+
+function aggregateRolls(rolls){
+	var resultString = "";
+	var prevDamage = rolls[0];
+		var rollCount = 1;
+	resultString += rolls[0];
+	for (var i = 1; i < rolls.length; i++) {
+		if (rolls[i] == prevDamage) {
+				rollCount++;
+			} else {
+				resultString +=
+					rollCount > 1
+					? " [x" + rollCount + "], " + rolls[i]
+					: ", " + rolls[i];
+				rollCount = 1;
+			prevDamage = rolls[i];
+			}
+		}
+		if (rollCount > 1) {
+			resultString += " [x" + rollCount + "])";
+		} else {
+			resultString += ")";
+		}
+	return resultString;
+}
+
+function displayDamageHits(damage, drain, recoil) {
+	
 	// Fixed Damage
-	if (typeof damage === 'number') return damage;
+	if (typeof damage === "number") rollText = damage;
 	// Standard Damage
-	if (damage.length > 2) return damage.join(', ');
+	else if (damage.length > 2) {
+		rollText = aggregateRolls(damage);
+	}
 	// Fixed Parental Bond Damage
-	if (typeof damage[0] === 'number' && typeof damage[1] === 'number') {
-		return '1st Hit: ' + damage[0] + '; 2nd Hit: ' + damage[1];
+	else if (typeof damage[0] === "number" && typeof damage[1] === "number") {
+		rollText = "1st Hit: " + damage[0] + "; 2nd Hit: " + damage[1];
 	}
 	// Parental Bond Damage
-	return '1st Hit: ' + damage[0].join(', ') + '; 2nd Hit: ' + damage[1].join(', ');
+	// TODO IN THE DISTANT FUTURE: Apply agg to this
+	else {rollText = "1st Hit: " + damage[0].join(", ") + "; 2nd Hit: " + damage[1].join(", ")}
+	$("#damageValues").text("Rolls: (" + rollText + ")");
+
+	if(drain){
+		$("#drainValues").attr("hidden", false)
+		drainRolls = damage.map((e) => (e / drain[1])).map((e) => (e * drain[0])).map((e)=>(Math.trunc(e)))
+		var drainText = aggregateRolls(drainRolls)
+		$("#drainValues").text("Recovered: (" + drainText + ")");
+	}else $("#drainValues").attr("hidden", true);
+
+	if(recoil){
+		$("#recoilValues").attr("hidden", false)
+		recoilRolls = damage.map((e) => (e / recoil[1])).map((e) => (e * recoil[0])).map((e)=>(Math.trunc(e)))
+		var recoilText = aggregateRolls(recoilRolls)
+		$("#recoilValues").text("Recoil: (" + recoilText + ")");
+	}else $("#recoilValues").attr("hidden", true);
+
 }
 
 function findDamageResult(resultMoveObj) {
